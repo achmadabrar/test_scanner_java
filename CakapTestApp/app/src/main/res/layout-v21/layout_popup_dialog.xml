@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title_dialog"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/sort_by"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_radio_name"
+            app:layout_constraintBottom_toBottomOf="@id/btn_radio_name"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+
+            <RadioGroup
+            android:id="@+id/btn_radio_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+                <RadioButton
+                    android:id="@+id/rbt_name"
+                    android:backgroundTint="@color/grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_radio_email"
+            app:layout_constraintBottom_toBottomOf="@id/btn_radio_email"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+
+        <RadioButton
+            android:id="@+id/btn_radio_email"
+            app:layout_constraintTop_toBottomOf="@id/btn_radio_name"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_radio_phone"
+            app:layout_constraintBottom_toBottomOf="@id/btn_radio_phone"
+            android:text="@string/phone"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+
+        <RadioButton
+            android:id="@+id/btn_radio_phone"
+            app:layout_constraintTop_toBottomOf="@id/btn_radio_email"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/tv_created_at"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_created_at"
+            app:layout_constraintBottom_toBottomOf="@id/btn_created_at"
+            android:text="@string/created_at"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+
+        <RadioButton
+            android:id="@+id/btn_created_at"
+            app:layout_constraintTop_toBottomOf="@id/btn_radio_phone"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/tv_asc"
+            app:layout_constraintEnd_toStartOf="@id/btn_radio_asc"
+            app:layout_constraintTop_toTopOf="@id/btn_radio_asc"
+            app:layout_constraintBottom_toBottomOf="@id/btn_radio_asc"
+            android:layout_marginEnd="5dp"
+            android:text="@string/asc"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="5dp" />
+
+        <RadioButton
+            android:id="@+id/btn_radio_asc"
+            app:layout_constraintTop_toBottomOf="@id/tv_created_at"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@id/view_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            app:layout_constraintTop_toTopOf="@id/btn_radio_desc"
+            app:layout_constraintBottom_toBottomOf="@id/btn_radio_desc"
+            android:text="@string/desc"
+            app:layout_constraintStart_toEndOf="@id/view_center"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+
+        <RadioButton
+            android:id="@+id/btn_radio_desc"
+            app:layout_constraintTop_toBottomOf="@id/tv_created_at"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+
+        <View
+            android:id="@+id/view_center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+        
+        <Button
+            android:id="@+id/btn_submit_filter"
+            app:layout_constraintTop_toBottomOf="@id/btn_radio_desc"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
